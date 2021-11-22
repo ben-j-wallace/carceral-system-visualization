@@ -7,7 +7,7 @@ author:
     url: https://github.com/ben-j-wallace/
 date: "November 22, 2021"
 output: distill::distill_article
-bibliography: bibliography.bib
+bibliography: zotero.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -32,7 +32,7 @@ o In short, a data visualization is any way that of some sort of data (counts, p
 o Specifically, both are confined to what is countable both empirically and practically. 
 o This bounds the types of questions that data visualization and statistics can pursue, particularly since they cannot adequately document human experiences of confinement, violence, and surveillance.
 * Angela Davis argues that one should “[hesitate] to make unmediated… use of such statistical evidence because it can discourage the very critical thinking that ought to be elicited by an understanding of the prison industrial complex” (92).
-* Scholars, policymakers, and reformers have drawn from historical data to promote “common sense” ideas about Black criminality, prison, and policing, allowing the effects of their own scholarship and policy to stand in as self-evident knowledge (Muhammad).
+* Scholars, policymakers, and reformers have drawn from historical data to promote “common sense” ideas about Black criminality, prison, and policing, allowing the effects of their own scholarship and policy to stand in as self-evident knowledge [@muhammadSavingNationRacial2019].
 * Because of these traditions, institutional and historic data should be interrogated. What can they realistically measure, and what human and systematic biases do they contain?
 * These methodological can be partly rectified combining several data sources, but more importantly one should critically examine the extent to which data and visualizations are relevant to one’s questions or goals.
 At the same time, data visualizations are not just statistics. They are also influenced by the properties of art and visual rhetoric.
