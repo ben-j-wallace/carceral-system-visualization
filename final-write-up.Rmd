@@ -10,151 +10,47 @@ output: distill::distill_article
 bibliography: zotero.bib
 ---
 
+## Introduction
+
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+library(knitr)
+library(cowplot)
+opts_chunk$set(echo = FALSE,
+               out.width = "75%",
+               fig.align = "center")
 ```
 
-Tucked in the right corner of a room at the 1900 Paris Exposition, W.E.B Du Bois’s “American Negro Exhibit” attracted thousands of visitors with its walls of photographs and boldly colored graphs. The sociologist was one of the first in his field to leverage data visualizations for scholarly work. 
-* The budding sociologist was one of the first social scientists to use data visualizations in his work.
-o He saw the potential of data visualizations in constructing a counter-story to the statistics that were being used to perpetuate myths of Black inferiority.
-o Specifically, Du Bois confronted narratives of Black criminality and biological inferiority proposed by white scholars such as Frederick Hoffman.
-o These scholars defended these conclusions using new quantitative methodologies as well as Census and social survey data. 
-* Ultimately, Du Bois and other Black leaders interrogated how numbers themselves can play a role in dismantling such oppressive notions.
-In the century since Du Bois’s exhibit in the Paris Exposition, the practice of data visualization has dramatically evolved in tandem with developments of visual criminology, social statistics, and the statistical knowledge state. 
-* This paper addresses the potential, limitations, and implications of data visualizations in representing the bodies and discourses that surround the carceral system.
-o Specifically, how can these portraits intervene in societal representations of those the system entangles, which so frequently neglect the humanity of those it holds captive?
-* The paper responds to this question by discussing the necessary ways in which the scale and representations of social context, and alternatives to prison and policing data visualizations can visually denaturalize the carceral imagination in our daily lives.
-o The shortcomings and achievements of data visualizations in contemporary visualizations also do not simply materialize in the final graphic; they are instead determined through a series of choices, from the data collection to review of area-specific and visualization ethics literature and the creation of the visualization itself. 
-What is a data visualization?
-* My definition intentionally broader than the normative one (pie charts, bar graphs, etc.) and includes other forms such as tables, lists, and illustrations. 
-o In short, a data visualization is any way that of some sort of data (counts, proportions, regressions) can be put together in a way in which the appearance and organization itself contains a visual rhetoric.
-* Data visualizations are informed by the qualities of statistics of data. 
-o Specifically, both are confined to what is countable both empirically and practically. 
-o This bounds the types of questions that data visualization and statistics can pursue, particularly since they cannot adequately document human experiences of confinement, violence, and surveillance.
-* Angela Davis argues that one should “[hesitate] to make unmediated… use of such statistical evidence because it can discourage the very critical thinking that ought to be elicited by an understanding of the prison industrial complex” (92).
-* Scholars, policymakers, and reformers have drawn from historical data to promote “common sense” ideas about Black criminality, prison, and policing, allowing the effects of their own scholarship and policy to stand in as self-evident knowledge [@muhammadSavingNationRacial2019].
-* Because of these traditions, institutional and historic data should be interrogated. What can they realistically measure, and what human and systematic biases do they contain?
-* These methodological can be partly rectified combining several data sources, but more importantly one should critically examine the extent to which data and visualizations are relevant to one’s questions or goals.
-At the same time, data visualizations are not just statistics. They are also influenced by the properties of art and visual rhetoric.
-* How, for example, can one represent events, places, and people with aesthetics, colors, and scales?
-* These graphic representations can break the sense of “linear logic” (Sutcliffe 2015) inherent to the natural left-to-right flow of English language on the page. 
-o We do not experience life in a top-to-bottom, logical way.
-o Visual representations of the carceral system can provoke ‘something more akin to transcended comprehension; something more akin to... literacy.’ (visualizing abolition, 3 quoting James Bucky Carter (2013)). 
-o In other words, graphics can provoke the affective, cognitive, and emotional means by which we experience life itself. 
-Data visualizations can also portray the ways in which the carceral system is simultaneously absent and present in daily life.
-* They can, for example, calculate trends and aggregates that cannot be easily determined on an individual-to-individual basis.
-* Data visualizations can also help illuminate invisible forces.
-o Cornell University’s Spatial Science Lab geographically highlighted the “mass migration” of New Yorkers to outside prisons (million dollar blocks). The solar flare-like image emphasizes the great distances that prisoners are moved, a process that is hidden from public view yet has incredible effects on inmates and families.
-       
-o Yet the human toll of these migrations are left out of this project. 
-o The lines themselves only capture one dimension: the movement of this migration. What does this mean for families to now have members out of reach? What are the physical and mental impacts of this relocation process?
-The limited dimensionality of data visualization helps explain Du Bois’s decision to pair aggregates and trends from his graphs with images of the faces and lives they represent. A chart that with the averages the annual budget of Black families in Georgia, for instance, is paired next to 8 individual pages.
+> The best available methods of sociological research are at present so liable to inaccuracies that the careful student discloses the results of individual research with diffidence; he knows that they are liable to error from the seemingly ineradicable faults of the statistical method, to even greater error from the methods of general observation, and, above all, he must ever tremble lest some personal bias, some moral conviction or some unconscious trend of thought due to previous training, has to a degree distorted the picture in his view.
 
-* As Du Bois undoubtedly confronted during his preparation of the “American Negro Exhibit,” statistics only tell part of any story. What is missing is left to the imagination, which in turn is so often informed by normalized yet harmful narratives about Black people. 
-* For this reason, it is important to include some context. 
-As the Spatial Science Lab and Du Bois’s works exhibit, data visualizations alone often fail to capture the social contexts and mechanisms that shape human experiences.
-* This problem becomes particularly pertinent when attempting to display the scale of mass incarceration or policing.
-* In 2016, for example, jails admitted 10.6 million people (prison policy initiative).
-o The number alone defines something large and cognitively graspable. 
-o Angela Davis “Numbers themselves would defy the imagination were they not so neatly classified and rationally organized” (93).
-To confront this problem, Mona Chalabi and the Prison Policy Initiative created an illustration that reproduces the 10.6 million jail admissions in a way that is intentionally less digestible.
-* Specifically, Chalabi draws a small portrait of a person in an orange jumpsuits that is repeated 10.6 million times to create the cumulative enormity of admission after admission.
-o This choice in representation makes the scale of admissions much less easily comprehended.
-o It takes several minutes of scrolling to reach the end of the page. 
-o As the individual watches more and more individual orange boxes accumulate, there is an intentional overstimulation of the senses. My screen’s resolution could not handle the small lines of each box and began to flicker and glitch.
-o This discomfort the image instills in the viewer appears to be an intentional choice.
-* The visual also manages to go beyond the scale of jail admissions and discuss their effects
-o Throughout the scrolling process, there are a few blocks of text that weave in events of the year, noting dates such as the beginning of the school year and holidays to connect the statistics and orange dots to those that are not represented such as families and children. 
-o They also discuss the toll of confinement itself on mental health and how it leads to suicides and other deaths (often early in the process). 
-* Chalabi’s graphic displays a common trade-off of visuals that display the scale of the carceral system. They often leave out the individual stories of those that are affected both for unintentional and practical reasons.
-13th documentary similarly focuses on the massification of prisons and sentencing since the beginning of the War on Drugs to 2016, interspersed with commentary on how this came to be.
-* Historical surveillance and confinement of Black population stemming from Post-Civil War convict leasing, Jim Crow, Political incentives, backlash to Civil Rights and Black Power Movement, etc.
-* This emphasis on scale is augmented by visuals tracing the increase of prisoners over the course of these decades, culminating in a full chart of the progression of U.S. Prison Population (50:21). 
-       
-* While the documentary mostly excludes individual stories of U.S. prisoners (perhaps again because of practical reasons but there also are many ex-inmates they could have interviewed?), this shifts as the discussion turns towards black victims of police violence.
-o Begins with a series of videos documenting brutal use of force and the families it affected, then a giant graphic of “unarmed black victims killed by police” which includes the name of the person, date they were killed, and how they were killed.
-       
-o This visual is underpinned by Michelle Alexander’s statement that “police violence… isn’t the problem in and of itself” and is instead “reflective of a greater system of surveillance and control” (1:33:21). 
-o While similarly marred by its inability to humanize each individual victim of police violence, 13th succeeds in threading the legacy of racism and historical surveillance of Black Americans that led to these tragedies.
-Ida B. Wells’s pamphlet The Red Record also brings together the different pieces that made the sheer scale of racial terror possible, while humanizing those that it affects in the process
-* The book is 100 pages long and 14 of them are dedicated to naming and describing each individual victim of lynching.
-* This use of space in her pamphlet is visually intentional; it implicitly argues for the importance saying the victims’ names, how it humanizes them.
-* At the same time, Wells also attempts to quantify the number of victims that lynching mobs have captured, while also bringing into the question the reliability data itself, which was “confined” to the incidents that the white newspaper The Chicago Tribune defined as “lynching.”
-o She allows the aggregates from her data as well as her reporting of individual lynching incidents to inform her hypotheses of why lynchings happen, specifically maintenance and mobilization of white power (10) and fear of interracial sexual and social relationships (12).
-o Importantly, these mixed methods helped her politically advocate against lynching and earn the support of the UK as well as several U.S. politicians.
-* Wells shows how documenting scale and social context are not mutually exclusive, they can both bolster her advocacy for the fair treatment of African Americans.
-Like Well’s discussion of lynchings, the image of Black mortality, immorality, and criminality were inventions of American social fabric, yet repeatedly reproduced by white scholars using newer authoritative methods. Often, this scholarship embedded bias into the data itself
-* Du Bois acknowledged these developments and saw the importance of reviewing existing data and comparing it to international social conditions. Both of these tools produced results that contradicted widespread notions of Black biological inferiority.
-o Specifically, Du Bois charts the population growth of Black and White Americans, demonstrating a constant growth of both groups.
-o He also compares the United States’s Black population to other countries that attended the Paris Fair. He was aware of audience and wanted to make a point that the “extinction thesis” could not be true given relatively higher mortality rates of other European countries.
-  
+Tucked in the right corner of a room at the 1900 Paris Exposition, W.E.B. Du Bois's "American Negro Exhibit" attracted thousands of visitors with its walls of photographs and boldly designed charts. The sociologist and his team of students built a story of Black progress more than forty years after emancipation after combing through dozens of images of ministers, students, cotton mill workers, and others [@rusertBoisDataPortraits2018].
 
-As mentioned previously, Du Bois was also aware of the narratives about Black people that were being perpetuated by white racial scholars that used the same data (incorrectly), but defended their conclusions as infallible truths. 
-* Frederick Hoffman’s The Arena exhibits the dangers of this authoritative posturing and disguising effects as the causes. 
-o He begins his chapter “Vital Statistics of the Negro” by noting his commitment to a definition of science that is “a knowledge and collection of facts, and it is in the sense of this definition that I propose to present the so-called race problem.”
-       
-o He then draws upon mortality statistics from several southern cities to draw a distinction between “white” an “colored” populations, using a table that visually emphasizes the simple comparison as central to his argument. 
-o This presentation is conducive to the argument that races have innate differences, since it leaves the contributing social conditions of this discrepancy to one’s own imagination. 
-o Hoffman, for instance, points to sexually transmitted diseases and drug use as the chief two causes of these differences, stating that Black people’s “gross immortality, early and excessive intercourse of the sexes, premature maternity, and general intemperance in eating and drinking” leads to their high mortality (535).
-o However, he does not cite any studies in which such racial predispositions were found, and instead argues that “any physician that has practiced among colored people will bear [him] out” (535).
-o The visual representation of his data set the grounds for these fabricated conclusions by allowing numbers themselves to stand in for the history and contexts that produced them.
-o In response to Hoffman’s paper, Du Bois inverts Hoffman’s own authoritative rhetoric, arguing that he does not carefully draw his data sources and apply his statistical method correctly.
-o This conclusion is in direct contradiction to Hoffman’s earlier statements that present data was incomplete and potentially unreliable (529).
-* Besides comparisons, deviances from other countries can help add context to problems that are severe in the United States
-o Prison Policy’s “World Incarceration Rate if every U.S. State were a Country” shows that even the states with low incarceration rates are higher than most countries. 
-o Race to Incarcerate’s depiction similarly emphasizes the United States’s disproportionate incarceration rates compared to other countries, but adds the element of human bodies quite literally behind bars, the cramped and uncomfortable experience of imprisonment foregrounded (23%). 730/100,000
-o Lastly, the comparison to other countries offers the possibility of what could be. Why does the United States have a higher rate of incarceration compared to other countries? What can we learn from them?
- 
-Million dollar blocks: presentation of social mechanisms
-o The Center for Spatial Research at Columbia University produced a visualization showing the places in Brooklyn where this happens, but leaves absent the mechanisms that make certain areas so expensive to police. A reader will ask, why is this area so policed?
+```{r, fig.cap="Photographs from American Negro Exhibit. Library of Congress. Digital ID: https://www.loc.gov/pictures/item/00651765/"}
+ggdraw() +
+  draw_image("images/paris-woodworkers.jpg", width = 0.5) +
+  draw_image("images/paris-university.jpg", width = 0.5, x = 0.5)
+```
+```{r, fig.cap="Charts from American Negro Exhibit. Library of Congress. Digital ID: https://www.loc.gov/pictures/item/2005676812/"}
+ggdraw() +
+  draw_image("images/paris-occupation.jpg", width = 0.5) +
+  draw_image("images/paris-georgiapop.jpg", width = 0.5, x = 0.5)
+```
 
-Real Comix (33) explains how “million dollar blocks” are not the result of inherent criminality of certain communities but the neglect of resources put into drug-prevention, healthcare, or education and job training. 
-       
-o In other words, the million dollar blocks illuminates a dedication of resources to police instead of a social safety net.
-* argues that the growth of policing of non-violent drug offenses is what leads this surge, and uses statistics to refer to the disproportionate toll this has on Black and Latino communities.
-Real Comix War on Drugs and African Americans (82%): connection to data visualizations dealing with racial disparities. What do different representations communicate about the underlying imbalance of prison and policing on Black, Indigenous, and other communities of color?
+Du Bois's choices to exhibit Black advancement stood in contrast to his other work, which emphasized the extreme inequities and racial discrimination plaguing the country at the turn of the century [@duboisChapter18Final1899]. Like white racial scholars, he also drew from Census, crime, and social survey data to build narratives about the so-called "race problem." However, while well-versed in the language of statistics and methodology, Du Bois understood the limits of numbers in representing and used this knowledge to confront the harmful myths of Black criminality, immorality, and biological inferiority. He challenged Frederick Hoffman, president of the American Statistics Association, on the methodological errors and prejudiced judgments that he concealed through the veil of scientific authority. Ultimately, Du Bois and other Black leaders interrogated how numbers themselves can play a role in dismantling such oppressive notions.
 
-       
-* First image: “African Americans” is the shadow of the War on Drugs rather than the object creating the shadow (82%).
-o Inverts the popular notion of Black criminality by changing the direction of causality. African Americans did not create the War on Drugs; the War on Drugs led to the disproportionate imprisonment of Black people
-* Hinton From the War on Poverty to the War on Drugs: “the War on Poverty is best understood not as an effort to broadly uplift communities or as a moral crusade… but as a manifestation of fear about urban disorder and about the behavior of young people, particularly young African Americans” (32).
-* Second (83%): also dispel the notion of Black criminality and drug use through its use of proportions and illustrations.
-o The bar chart at the bottom of the second image does not make comparisons between “races” and their drug use or arrests, which so often implies a logic of biological race (ex: Hoffman), but instead compares the national proportion of Black people in the population to how much they are disproportionately arrested. The graphic is intentionally placed next to two boys, white and black and of equal height, smoking to visually argue that drug use does not vary by race.
-o The third (88%) image: again separates Black people themselves from the offenses put onto them “violence, high, prior conviction” to show the dehumanizing force that these labels have. 
-o The addition of this context is necessary whenever race is a “variable” or dimension in a data visualization. Before even making a visualization, one should examine if and how race is relevant to their questions.
-Real Comix also visually represents the results of statistics as well as the possibilities of what happened if these millions of dollars put elsewhere and reducing criminalization. 
-* Uses statistics along with pictures of youth tending flowers (40) to show how money can be invested into youth rather than putting them behind bars 
-o Symbols that appeal to emotions, family, and community (child and mother in embrace, school).
-* The last image “the cost of a cage” (38) uses proportions to signify how 1 year of imprisonment costs approximately the same as 19 years of community college. 
-o The difference between the two illustrations, the downcast man behind bars, and the other actively raising their hand at a classroom desk, reflects this optimism for alternatives. 
-o The reader sees this illustration after reading two sections: one about prison towns and the other about the “million dollar blocks.” 
-o At this point, they have reflected on series of choices on legislation, zoning, and politics that led to the investment in policing communities and building prisons rather than the wellbeing of residents. 
-       
-       
-       
-  
-Connection to Real Comix’s visual representation of alternatives to policing: Shabazz’s final chapter of Spatializing Blackness also examines alternatives to a system of confinement and surveillance of Black communities in Chicago. 
-* Specifically, he historicizes green spaces and community gardens in the South Side, how it shows how these same communities can transform their space, even if it does not necessarily rectify decades of segregation and policing.
-* Again, helps denaturalize the status-quo of the occupation of carceral powers in communities, that communities can only be externally shaped rather than internally. 
-* 
-Like Shabazz, the Vera Institute for Justice and MASS (an architecture firm) similarly envision how space and time in prisons can transformed to improve wellbeing.
-* Johnson, Forms of Constraint. Sentence explaining the development of prison architecture to today, how punishment, rehabilitation, and protection are the main goals but rehabilitation is mostly ignored.
-o The two visualizations emphasize how prison’s architecture and schedule lead to this lack of rehabilitative work. 
-o The purple shading emphasizes the transformation from punitive to therapeutic prisons, but also calls into question what remains the same. The prison-industrial complex remains a priority as long as prison is not abolished.
-       
+In the century since the "American Negro Exhibit", the practice of data visualization has dramatically evolved in tandem with developments in visual criminology, social statistics, and the statistical knowledge state. This paper addresses the prospects, limitations, and implications of using data visualization in representing the bodies and discources surrounding the carceral system. Specifically, I ask: how can these portraits intervene in representations of those the system entangles, a system which so frequently neglects humanity to those it holds captive? I respond to this question by discussing the necessary ways in which data visualizations can represent scale, social context, and alternatives to policing and prisons to visually denaturalize the carceral imagination in our daily lives.
 
-Besides the revisioning of the space and systems, prison abolitionists and reformers have also attempted to rethink their political strategies and mobilization.
-* Nat Smith and Eric Stanley’s Captive Genders specifically reflects on the political trajectory of queer and trans rights movements and how its “official” (16) arm has advocated for policies that expand the powers of the carceral system in the name of equality. 
-* In a table titled “Current Landscape,” the authors raise “big problems” faced by the LGBTQIA + movement, visually bifurcating the community into its ‘official’ and “transformative” wings.
-o It powerfully shows the limits of certain policy recommendations such as gay marriage and hate crime legislation in addressing the problems faced by poor, working-class, and transgender peoples.
-o However, this presentation of arguments removes any ideological debate between or outside these two points of view.
-* It is not necessarily true that any proposals that are not transformative are also ‘official,’ vice versa.
-o The table then creates a logic that is not well-suited to the goals of the author, creating a cross-racial and class queer and trans movement. 
+Journalists, academics, and think tanks may hide their process of data visualization, consequently making any scrutiny limited by a black box. Because of this, I must acknowledge that the shortcomings and achievements of contemporary work does not simply materialize in a final graphic; they are instead determined through a series of choices, from  data collection to review of area-specific and visualization ethics literature and the creation of the visualization itself [@hepworthRacismMachineVisualization2018]. For this reason, more initiatives for reproducibility and ethics for visualizations are needed. [include in the previous paragraph]
 
-Conclusion: I need to write this! 
+## Data visualizations, what are they?
 
 
 
+However, this limited definition ignores the ways in which data appears in other formats throughout daily life. Counts, proportions, and regressions can be organized in numerous other ways like tables, lists, and illustrations. What binds these unorthodox representations to normative data visualizations is their connection between statistical data and a visual rhetoric.
 
+One of the most defining features of statistical data is that they are both empirically and practically limited to what is countable. These two bounds limit the types of questions for which a data visualization is a suitable answer. One must only examine the intricacies of prison maintenance, for example, to understand the restrictions of data visualizations. The prison-industrial complex is an "array of relationships linking corporations, government, correctional communities, ... the media" and other institutions [@davisPrisonIndustrialComplex2011]. Scholars like Angela Davis "[hesitate] to make unmediated… use of such statistical evidence because it can discourage the very critical thinking that ought to be elicited by an understanding of the prison industrial complex" [@davisPrisonIndustrialComplex2011a]. 
+
+Statisticians, data scientists, and data visualizationists must also contend with the invisible biases of historical data, how they reproduce "common sense" ideas about Black, Indigenous, and other marginalized communities, and disguise these conclusions as self-evident knowledge [@muhammadSavingNationRacial2019]. Because of these shortcomings, researchers should interrogate the reliability of institutional and historical data. While these issues can be particularly rectified through the combination of several data sources, it is more important that researchers consider these data within their respective contexts. What can they realistically measure, what human and systematic biases do they contain, and how are these statistics relevant to one's questions or goals?
+
+Beyond statistics, data visualizations are also influenced by the properties of art and visual rhetoric. They 
 
 
